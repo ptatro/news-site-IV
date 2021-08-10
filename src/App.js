@@ -4,6 +4,7 @@ import './App.css';
 import AppNav from './components/AppNav/AppNav.js';
 import HomePage from './pages/HomePage.js';
 import ArticlePage from './pages/ArticlePage.js';
+import SectionPage from './pages/SectionPage';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Router>
           <div>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/sections/:sectionID" component={SectionPage} />
             <Route exact path="/articles/:articleID" component={ArticlePage} />
           </div>
         </Router>
